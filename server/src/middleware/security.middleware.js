@@ -12,6 +12,8 @@ export default function securityMiddleware(app) {
         credentials: true
     }));
 
+    app.use(cookieParser());
+
     app.use(rateLimit({
         windowMs: env.RATELIMIT_WINDOWMS,
         limit: env.RATELIMIT,
