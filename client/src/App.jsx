@@ -1,11 +1,16 @@
-import React from 'react'
+import { createBrowserRouter } from "react-router";
+import AppLayout from "./layout/AppLayout.jsx";
+import AdminLayout from "./layout/AdminLayout.jsx";
 
-const App = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+let router = createBrowserRouter([
+  {
+    path: '/',
+    element: <AppLayout />
+  },
+  {
+    path: '/admin',
+    element: <AdminLayout />
+  }
+])
 
-export default App
+export default router;
